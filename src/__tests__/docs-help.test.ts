@@ -118,8 +118,9 @@ describe("docs and CLI help", () => {
     assert.doesNotMatch(packageJson, /"build\/icon\.svg"/);
   });
 
-  it("normalizes the repository owner to 0xbl33p", () => {
-    assert.match(packageJson, /github\.com\/0xbl33p\/goblintown/);
+  it("points package metadata at the Goblintown Labs upstream repo", () => {
+    assert.match(packageJson, /github\.com\/goblintown-labs\/goblintown-[a-z-]+/);
+    assert.doesNotMatch(packageJson, /github\.com\/0xbl33p\/goblintown/);
     assert.doesNotMatch(packageJson, /github\.com\/0XBL33P\/goblintown/);
   });
 
