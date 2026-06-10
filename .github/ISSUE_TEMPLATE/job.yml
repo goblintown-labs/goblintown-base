@@ -1,0 +1,26 @@
+name: Job
+description: Agent-ready implementation task
+title: "[Job] "
+labels: ["agent-ready", "owner:base"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should be true when this is done?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Files, systems, or behavior expected to change.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Commands, screenshots, evidence, or review gates required.
+    validations:
+      required: true
